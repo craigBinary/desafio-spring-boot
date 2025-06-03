@@ -36,7 +36,7 @@ API RESTful para la empresa NUEVO SPA, encargada de administrar usuarios,tareas 
 ## Configuración
 1. Clonar el repositorio:
     ```bash
-    git clone https://github.com/craigBinary/SpringBoot-Previred.git
+    git clone https://github.com/craigBinary/desafio-spring-boot.git
     ```
 2. Compilar y ejecutar el proyecto en el directorio ("taskmanagementapi"): cd taskmanagementapi;
     ```bash
