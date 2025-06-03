@@ -1,0 +1,514 @@
+{
+	"info": {
+		"_postman_id": "903decbb-a5b8-4946-898b-c49e865cb3a0",
+		"name": "Api Gestión de Tareas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12280865"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "localhost:8080/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreUsuario\": \"Craig Fernandez\",\r\n    \"clave\": \"12345678\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "localhost:8080/api/v1/usuarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDcmFpZyBGZXJuYW5kZXoiLCJhdXRob3JpdGllcyI6Ilt7XCJhdXRob3JpdHlcIjpcIlJPTEVfVVNFUlwifV0iLCJ1c2VybmFtZSI6IkNyYWlnIEZlcm5hbmRleiIsImV4cCI6MTc0ODg4MDM2MywiaWF0IjoxNzQ4ODc2NzYzfQ.ykawXB1X76FfjAaoyBxeK_i0bQauLefuPIfEb4Rhfu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/api/v1/usuarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDcmFpZyBGZXJuYW5kZXoiLCJhdXRob3JpdGllcyI6Ilt7XCJhdXRob3JpdHlcIjpcIlJPTEVfVVNFUlwifV0iLCJ1c2VybmFtZSI6IkNyYWlnIEZlcm5hbmRleiIsImV4cCI6MTc0ODg4MDM2MywiaWF0IjoxNzQ4ODc2NzYzfQ.ykawXB1X76FfjAaoyBxeK_i0bQauLefuPIfEb4Rhfu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombreUsuario\": \"Pepito Perez\",\r\n  \"clave\": \"12345678\",\r\n  \"correo\": \"correo_test@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/api/v1/usuarios",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDcmFpZyBGZXJuYW5kZXoiLCJhdXRob3JpdGllcyI6Ilt7XCJhdXRob3JpdHlcIjpcIlJPTEVfVVNFUlwifV0iLCJ1c2VybmFtZSI6IkNyYWlnIEZlcm5hbmRleiIsImV4cCI6MTc0ODg4MDg1NSwiaWF0IjoxNzQ4ODc3MjU1fQ.O7QOxOLoSpE3h91J_mftFqh0BbgwMCc-oBs79nMENPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombreUsuario\": \"Rodrigo Mercado\",\r\n  \"clave\": \"12345678\",\r\n  \"correo\": \"correo2@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/usuarios/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"2"
+							]
+						},
+						"description": "Actualiza usuario"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/api/v1/usuarios/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDcmFpZyBGZXJuYW5kZXoiLCJhdXRob3JpdGllcyI6Ilt7XCJhdXRob3JpdHlcIjpcIlJPTEVfVVNFUlwifV0iLCJ1c2VybmFtZSI6IkNyYWlnIEZlcm5hbmRleiIsImV4cCI6MTc0ODg4MDM2MywiaWF0IjoxNzQ4ODc2NzYzfQ.ykawXB1X76FfjAaoyBxeK_i0bQauLefuPIfEb4Rhfu8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/usuarios/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"2"
+							]
+						},
+						"description": "Busca usuario por ID"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/api/v1/usuarios/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDcmFpZyBGZXJuYW5kZXoiLCJhdXRob3JpdGllcyI6Ilt7XCJhdXRob3JpdHlcIjpcIlJPTEVfVVNFUlwifV0iLCJ1c2VybmFtZSI6IkNyYWlnIEZlcm5hbmRleiIsImV4cCI6MTc0ODg4MDg1NSwiaWF0IjoxNzQ4ODc3MjU1fQ.O7QOxOLoSpE3h91J_mftFqh0BbgwMCc-oBs79nMENPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/usuarios/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"usuarios",
+								"3"
+							]
+						},
+						"description": "Elimina usuario"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Estado Tarea",
+			"item": [
+				{
+					"name": "localhost:8080/api/v1/estados",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDcmFpZyBGZXJuYW5kZXoiLCJhdXRob3JpdGllcyI6Ilt7XCJhdXRob3JpdHlcIjpcIlJPTEVfVVNFUlwifV0iLCJ1c2VybmFtZSI6IkNyYWlnIEZlcm5hbmRleiIsImV4cCI6MTc0ODg4MDg1NSwiaWF0IjoxNzQ4ODc3MjU1fQ.O7QOxOLoSpE3h91J_mftFqh0BbgwMCc-oBs79nMENPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombreEstado\": \"Nueva\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/estados",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"estados"
+							]
+						},
+						"description": "Agrega estado tarea"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/api/v1/estados",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDcmFpZyBGZXJuYW5kZXoiLCJhdXRob3JpdGllcyI6Ilt7XCJhdXRob3JpdHlcIjpcIlJPTEVfVVNFUlwifV0iLCJ1c2VybmFtZSI6IkNyYWlnIEZlcm5hbmRleiIsImV4cCI6MTc0ODg4MDg1NSwiaWF0IjoxNzQ4ODc3MjU1fQ.O7QOxOLoSpE3h91J_mftFqh0BbgwMCc-oBs79nMENPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/estados",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"estados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/api/v1/estados/3",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDcmFpZyBGZXJuYW5kZXoiLCJhdXRob3JpdGllcyI6Ilt7XCJhdXRob3JpdHlcIjpcIlJPTEVfVVNFUlwifV0iLCJ1c2VybmFtZSI6IkNyYWlnIEZlcm5hbmRleiIsImV4cCI6MTc0ODg4MDg1NSwiaWF0IjoxNzQ4ODc3MjU1fQ.O7QOxOLoSpE3h91J_mftFqh0BbgwMCc-oBs79nMENPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/estados/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"estados",
+								"4"
+							]
+						},
+						"description": "Elimina estado"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tarea",
+			"item": [
+				{
+					"name": "localhost:8080/api/v1/tareas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDcmFpZyBGZXJuYW5kZXoiLCJhdXRob3JpdGllcyI6Ilt7XCJhdXRob3JpdHlcIjpcIlJPTEVfVVNFUlwifV0iLCJ1c2VybmFtZSI6IkNyYWlnIEZlcm5hbmRleiIsImV4cCI6MTc0ODg4MDg1NSwiaWF0IjoxNzQ4ODc3MjU1fQ.O7QOxOLoSpE3h91J_mftFqh0BbgwMCc-oBs79nMENPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Tarea 3\",\r\n    \"descripcion\": \"Descripción de la tarea 3\",\r\n    \"estadoTareaId\": 2,\r\n    \"usuarioId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/tareas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tareas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/api/v1/tareas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDcmFpZyBGZXJuYW5kZXoiLCJhdXRob3JpdGllcyI6Ilt7XCJhdXRob3JpdHlcIjpcIlJPTEVfVVNFUlwifV0iLCJ1c2VybmFtZSI6IkNyYWlnIEZlcm5hbmRleiIsImV4cCI6MTc0ODg4MDg1NSwiaWF0IjoxNzQ4ODc3MjU1fQ.O7QOxOLoSpE3h91J_mftFqh0BbgwMCc-oBs79nMENPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/tareas",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tareas"
+							]
+						},
+						"description": "Listar tareas"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/api/v1/tareas/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDcmFpZyBGZXJuYW5kZXoiLCJhdXRob3JpdGllcyI6Ilt7XCJhdXRob3JpdHlcIjpcIlJPTEVfVVNFUlwifV0iLCJ1c2VybmFtZSI6IkNyYWlnIEZlcm5hbmRleiIsImV4cCI6MTc0ODg4MDg1NSwiaWF0IjoxNzQ4ODc3MjU1fQ.O7QOxOLoSpE3h91J_mftFqh0BbgwMCc-oBs79nMENPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/tareas/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tareas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/api/v1/tareas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDcmFpZyBGZXJuYW5kZXoiLCJhdXRob3JpdGllcyI6Ilt7XCJhdXRob3JpdHlcIjpcIlJPTEVfVVNFUlwifV0iLCJ1c2VybmFtZSI6IkNyYWlnIEZlcm5hbmRleiIsImV4cCI6MTc0ODg4MDg1NSwiaWF0IjoxNzQ4ODc3MjU1fQ.O7QOxOLoSpE3h91J_mftFqh0BbgwMCc-oBs79nMENPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"titulo\": \"entregar test\",\r\n  \"descripcion\": \"apuranding\",\r\n  \"estadoTareaId\": 3,\r\n  \"usuarioId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/tareas/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tareas",
+								"1"
+							]
+						},
+						"description": "Actualizar tarea"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/api/v1/tareas/2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDcmFpZyBGZXJuYW5kZXoiLCJhdXRob3JpdGllcyI6Ilt7XCJhdXRob3JpdHlcIjpcIlJPTEVfVVNFUlwifV0iLCJ1c2VybmFtZSI6IkNyYWlnIEZlcm5hbmRleiIsImV4cCI6MTc0ODg4MDg1NSwiaWF0IjoxNzQ4ODc3MjU1fQ.O7QOxOLoSpE3h91J_mftFqh0BbgwMCc-oBs79nMENPY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/tareas/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tareas",
+								"1"
+							]
+						},
+						"description": "Eliminar tarea por ID"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
